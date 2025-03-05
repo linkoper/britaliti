@@ -21,10 +21,10 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
-  .search-bar, #volverBtn {
+  .search-bar {
     margin-bottom: 20px;
   }
 
@@ -63,11 +63,16 @@
 
   #volverBtn {
     display: none;
-    background-color: #007bff;
-  }
-
-  #volverBtn:hover {
-    background-color: #0056b3;
+    background: url('https://static.vecteezy.com/system/resources/previews/010/151/174/original/house-and-home-icon-symbol-sign-free-png.png') no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
   }
 
   .gallery {
@@ -108,11 +113,11 @@
 <body>
 
 <h1>Buscar Imágenes y Videos 🌄🎥</h1>
+<button id="volverBtn" onclick="volverABuscar()" title="Volver a Buscar"></button>
 <div class="search-bar" id="searchSection">
   <input type="text" id="searchInput" placeholder="Escribe una palabra clave..." />
   <button onclick="buscar()">Buscar</button>
 </div>
-<button id="volverBtn" onclick="volverABuscar()">Volver a Buscar</button>
 <div class="gallery" id="gallery"></div>
 
 <script>
